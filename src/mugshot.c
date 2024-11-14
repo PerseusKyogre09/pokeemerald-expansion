@@ -26,7 +26,7 @@ static const u16 sMugshotPal_May[] = INCBIN_U16("graphics/mugshots/may.gbapal");
 
 static const struct Mugshot sMugshots[] = {
     //ADD YOUR MUGSHOTS HERE
-    [MUGSHOT_MAY] = {.x = 16, .y = 5, .width = 64, .height = 64, .image = sMugshotImg_May, .palette = sMugshotPal_May},
+    [MUGSHOT_MAY] = {.x = 0, .y = 6, .width = 64, .height = 64, .image = sMugshotImg_May, .palette = sMugshotPal_May},
 };
 
 

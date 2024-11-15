@@ -1021,3 +1021,14 @@ LittlerootTown_Text_BirchSomethingToShowYouAtLab:
 	.string "Let's go to my LAB.$"
 
 `
+script LittlerootTown_Red {
+    lockall
+	faceplayer
+    msgbox_mugshot("...", MSGBOX_DEFAULT, MUGSHOT_RED)
+	if (checkplayergender() == MALE){
+		msgbox_mugshot("(I need to get stronger)", MSGBOX_DEFAULT, MUGSHOT_BRENDAN)
+	} else {
+		msgbox_mugshot("(I need to get stronger)", MSGBOX_DEFAULT, MUGSHOT_MAY)
+	}
+    releaseall
+}

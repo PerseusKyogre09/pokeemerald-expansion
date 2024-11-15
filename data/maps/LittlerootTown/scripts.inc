@@ -2040,3 +2040,35 @@ LittlerootTown_Text_BirchSomethingToShowYouAtLab:
 	.string "I have something to show you.\n"
 # 1021 "data/maps/LittlerootTown/scripts.pory"
 	.string "Let's go to my LAB.$"
+
+LittlerootTown_Red::
+# 1025 "data/maps/LittlerootTown/scripts.pory"
+	lockall
+# 1026 "data/maps/LittlerootTown/scripts.pory"
+	faceplayer
+# 1027 "data/maps/LittlerootTown/scripts.pory"
+	msgbox_mugshot LittlerootTown_Red_Text_0, MSGBOX_DEFAULT, MUGSHOT_RED
+	checkplayergender
+# 0 "data/maps/LittlerootTown/scripts.pory"
+	compare VAR_RESULT, MALE
+	goto_if_eq LittlerootTown_Red_2
+# 1031 "data/maps/LittlerootTown/scripts.pory"
+	msgbox_mugshot LittlerootTown_Red_Text_1, MSGBOX_DEFAULT, MUGSHOT_MAY
+LittlerootTown_Red_1:
+# 1033 "data/maps/LittlerootTown/scripts.pory"
+	releaseall
+	return
+
+LittlerootTown_Red_2:
+# 1029 "data/maps/LittlerootTown/scripts.pory"
+	msgbox_mugshot LittlerootTown_Red_Text_1, MSGBOX_DEFAULT, MUGSHOT_BRENDAN
+	goto LittlerootTown_Red_1
+
+
+LittlerootTown_Red_Text_0:
+# 1027 "data/maps/LittlerootTown/scripts.pory"
+	.string "...$"
+
+LittlerootTown_Red_Text_1:
+# 1029 "data/maps/LittlerootTown/scripts.pory"
+	.string "(I need to get stronger)$"

@@ -13,6 +13,11 @@ static const u32 sFieldMugshotGfx_BrendanAlt[] = INCBIN_U32("graphics/field_mugs
 static const u16 sFieldMugshotPal_BrendanNormal[] = INCBIN_U16("graphics/field_mugshots/brendan/normal.gbapal");
 static const u16 sFieldMugshotPal_BrendanAlt[] = INCBIN_U16("graphics/field_mugshots/brendan/alt.gbapal");
 
+static const u32 sFieldMugshotGfx_VarunNormal[] = INCBIN_U32("graphics/field_mugshots/varun/normal.4bpp.lz");
+static const u32 sFieldMugshotGfx_VarunAlt[] = INCBIN_U32("graphics/field_mugshots/varun/alt.4bpp.lz");
+static const u16 sFieldMugshotPal_VarunNormal[] = INCBIN_U16("graphics/field_mugshots/varun/normal.gbapal");
+static const u16 sFieldMugshotPal_VarunAlt[] = INCBIN_U16("graphics/field_mugshots/varun/alt.gbapal");
+
 struct MugshotGfx
 {
     const u32 *gfx;
@@ -61,6 +66,20 @@ static const struct MugshotGfx sFieldMugshots[MUGSHOT_COUNT][EMOTE_COUNT] =
         {
             .gfx = sFieldMugshotGfx_BrendanAlt,
             .pal = sFieldMugshotPal_BrendanAlt,
+        },
+    },
+    [MUGSHOT_VARUN] =
+    {
+        [EMOTE_NORMAL] =
+        {
+            .gfx = sFieldMugshotGfx_VarunNormal,
+            .pal = sFieldMugshotPal_VarunNormal,
+        },
+
+        [EMOTE_ALT] =
+        {
+            .gfx = sFieldMugshotGfx_VarunAlt,
+            .pal = sFieldMugshotPal_VarunAlt,
         },
     },
 };

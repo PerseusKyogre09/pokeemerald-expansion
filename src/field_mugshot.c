@@ -52,20 +52,23 @@ static void SpriteCB_FieldMugshot(struct Sprite *s)
 
 void RemoveFieldMugshot(void)
 {
+    if (!sIsFieldMugshotActive)
+        return;
+        
     ResetPreservedPalettesInWeather();
-    if (sFieldMugshotSpriteIds[0] != 0xFF)
+    if (sFieldMugshotSpriteIds[0] != 0)
     {
         FreeSpriteTilesByTag(TAG_MUGSHOT);
         FreeSpritePaletteByTag(TAG_MUGSHOT);
         DestroySprite(&gSprites[sFieldMugshotSpriteIds[0]]);
-        sFieldMugshotSpriteIds[0] = SPRITE_NONE;
+        sFieldMugshotSpriteIds[0] = 0;
     }
-    if (sFieldMugshotSpriteIds[1] != 0xFF)
+    if (sFieldMugshotSpriteIds[1] != 0)
     {
         FreeSpriteTilesByTag(TAG_MUGSHOT2);
         FreeSpritePaletteByTag(TAG_MUGSHOT2);
         DestroySprite(&gSprites[sFieldMugshotSpriteIds[1]]);
-        sFieldMugshotSpriteIds[1] = SPRITE_NONE;
+        sFieldMugshotSpriteIds[1] = 0;
     }
     sIsFieldMugshotActive = FALSE;
 }

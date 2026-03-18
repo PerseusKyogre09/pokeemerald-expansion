@@ -13,10 +13,10 @@ static const u32 sFieldMugshotGfx_BrendanAlt[] = INCBIN_U32("graphics/field_mugs
 static const u16 sFieldMugshotPal_BrendanNormal[] = INCBIN_U16("graphics/field_mugshots/brendan/normal.gbapal");
 static const u16 sFieldMugshotPal_BrendanAlt[] = INCBIN_U16("graphics/field_mugshots/brendan/alt.gbapal");
 
-static const u32 sFieldMugshotGfx_VarunNormal[] = INCBIN_U32("graphics/field_mugshots/varun/normal.4bpp.lz");
-static const u32 sFieldMugshotGfx_VarunAlt[] = INCBIN_U32("graphics/field_mugshots/varun/alt.4bpp.lz");
-static const u16 sFieldMugshotPal_VarunNormal[] = INCBIN_U16("graphics/field_mugshots/varun/normal.gbapal");
-static const u16 sFieldMugshotPal_VarunAlt[] = INCBIN_U16("graphics/field_mugshots/varun/alt.gbapal");
+static const u32 sFieldMugshotGfx_RedNormal[] = INCBIN_U32("graphics/field_mugshots/red/normal.4bpp.lz");
+static const u32 sFieldMugshotGfx_RedAlt[] = INCBIN_U32("graphics/field_mugshots/red/alt.4bpp.lz");
+static const u16 sFieldMugshotPal_RedNormal[] = INCBIN_U16("graphics/field_mugshots/red/normal.gbapal");
+static const u16 sFieldMugshotPal_RedAlt[] = INCBIN_U16("graphics/field_mugshots/red/alt.gbapal");
 
 struct MugshotGfx
 {
@@ -68,18 +68,18 @@ static const struct MugshotGfx sFieldMugshots[MUGSHOT_COUNT][EMOTE_COUNT] =
             .pal = sFieldMugshotPal_BrendanAlt,
         },
     },
-    [MUGSHOT_VARUN] =
+    [MUGSHOT_RED] =
     {
         [EMOTE_NORMAL] =
         {
-            .gfx = sFieldMugshotGfx_VarunNormal,
-            .pal = sFieldMugshotPal_VarunNormal,
+            .gfx = sFieldMugshotGfx_RedNormal,
+            .pal = sFieldMugshotPal_RedNormal,
         },
 
         [EMOTE_ALT] =
         {
-            .gfx = sFieldMugshotGfx_VarunAlt,
-            .pal = sFieldMugshotPal_VarunAlt,
+            .gfx = sFieldMugshotGfx_RedAlt,
+            .pal = sFieldMugshotPal_RedAlt,
         },
     },
 };

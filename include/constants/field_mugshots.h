@@ -6,7 +6,7 @@ enum Mugshots {
     MUGSHOT_TEST,
     MUGSHOT_MAY,
     MUGSHOT_BRENDAN,
-    MUGSHOT_VARUN,
+    MUGSHOT_RED,
     MUGSHOT_COUNT,
 };
 
